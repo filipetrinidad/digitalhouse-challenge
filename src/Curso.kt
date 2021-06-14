@@ -8,13 +8,9 @@ class Curso {
     }
 
     override fun equals(other: Any?): Boolean {
-        return when(other) {
-            is Curso -> {
-                if(this.RC == other.RC) return true
-                return false
-            } else -> {
-                return super.equals(other)
-            }
-        }
+      if(other != null && other is Curso){
+          return this.RC == other.RC
+      }
+        return false
     }
 }

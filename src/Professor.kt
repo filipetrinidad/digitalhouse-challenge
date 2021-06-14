@@ -5,13 +5,9 @@ abstract class Professor() {
     abstract val RP: Int
 
     override fun equals(other: Any?): Boolean {
-        return when(other) {
-            is Professor -> {
-                if(this.RP == other.RP) return true
-                return false
-            } else -> {
-                return super.equals(other)
-            }
+        if(other != null && other is Professor){
+            return this.RP == other.RP
         }
+        return false
     }
 }

@@ -10,13 +10,9 @@ class Aluno {
     }
 
     override fun equals(other: Any?): Boolean {
-        return when(other) {
-            is Aluno -> {
-                if(this.RA == other.RA) return true
-                return false
-            } else -> {
-                return super.equals(other)
-            }
+        if(other != null && other is Aluno){
+            return this.RA == other.RA
         }
+        return false
     }
 }
