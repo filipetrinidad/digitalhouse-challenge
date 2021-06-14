@@ -8,4 +8,15 @@ class Aluno {
         this.sobrenome = sobrenome
         this.RA = RA
     }
+
+    override fun equals(other: Any?): Boolean {
+        return when(other) {
+            is Aluno -> {
+                if(this.RA == other.RA) return true
+                return false
+            } else -> {
+                return super.equals(other)
+            }
+        }
+    }
 }

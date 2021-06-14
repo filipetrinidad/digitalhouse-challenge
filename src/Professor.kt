@@ -1,13 +1,17 @@
-abstract class Professor {
-    val nome: String
-    val sobrenome: String
-    val tempo: Int
-    val RP: Int
+abstract class Professor() {
+    abstract val nome: String
+    abstract val sobrenome: String
+    abstract val tempo: Int
+    abstract val RP: Int
 
-    constructor(nome: String, sobrenome: String, tempo: Int, RP: Int) {
-        this.nome = nome
-        this.sobrenome = sobrenome
-        this.tempo = tempo
-        this.RP = RP
+    override fun equals(other: Any?): Boolean {
+        return when(other) {
+            is Professor -> {
+                if(this.RP == other.RP) return true
+                return false
+            } else -> {
+                return super.equals(other)
+            }
+        }
     }
 }
