@@ -1,10 +1,20 @@
-class Curso {
-    val nome: String
-    val RC: Int
+class Curso(   var nome: String,
+               var RC: Int,
+               var alunosMax: Int,
+               var alunosMatri: MutableList<Aluno> = mutableListOf()
+) {
 
-    constructor(nome: String, RC: Int) {
-        this.nome = nome
-        this.RC = RC
+    fun adicionarAluno(aluno: Aluno): Boolean{
+        if(alunosMatri.count() < alunosMax){
+            alunosMatri.add(aluno)
+            return true
+        }
+        return false
+    }
+
+    fun removerAluno(aluno: Aluno): Boolean{
+        alunosMatri.remove(aluno)
+        return true
     }
 
     override fun equals(other: Any?): Boolean {

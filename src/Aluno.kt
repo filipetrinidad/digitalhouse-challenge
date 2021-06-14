@@ -1,13 +1,6 @@
-class Aluno {
-    val aluno: String
-    val sobrenome: String
-    val RA: Int
-
-    constructor(aluno: String, sobrenome: String, RA: Int) {
-        this.aluno = aluno
-        this.sobrenome = sobrenome
-        this.RA = RA
-    }
+class Aluno( var aluno: String,
+             var sobrenome: String,
+             var RA: Int) {
 
     override fun equals(other: Any?): Boolean {
         if(other != null && other is Aluno){

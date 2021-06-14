@@ -1,8 +1,8 @@
 abstract class Professor() {
-    abstract val nome: String
-    abstract val sobrenome: String
-    abstract val tempo: Int
-    abstract val RP: Int
+    abstract var nome: String
+    abstract var sobrenome: String
+    abstract var tempo: Int
+    abstract var RP: Int
 
     override fun equals(other: Any?): Boolean {
         if(other != null && other is Professor){

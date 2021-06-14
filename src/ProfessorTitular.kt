@@ -1,7 +1,7 @@
 class ProfessorTitular(
-    override val nome: String,
-    override val sobrenome: String,
-    override val tempo: Int,
-    override val RP: Int,
-    val especialidade: String
+    override var nome: String,
+    override var sobrenome: String,
+    override var tempo: Int,
+    override var RP: Int,
+    var especialidade: String
 ):Professor()
