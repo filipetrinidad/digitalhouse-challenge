@@ -1,7 +1,7 @@
 class ProfessorAdjunto(
-    override val nome: String,
-    override val sobrenome: String,
-    override val tempo: Int,
-    override val RP: Int,
-    val quantHoras: Int
+    override var nome: String,
+    override var sobrenome: String,
+    override var tempo: Int,
+    override var RP: Int,
+    var quantHoras: Int,
 ): Professor()

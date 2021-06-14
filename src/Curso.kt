@@ -18,9 +18,9 @@ class Curso(   var nome: String,
     }
 
     override fun equals(other: Any?): Boolean {
-      if(other != null && other is Curso){
-          return this.RC == other.RC
-      }
+        if(other != null && other is Curso){
+            return this.RC == other.RC
+        }
         return false
     }
 }
